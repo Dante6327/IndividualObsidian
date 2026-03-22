@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    container_name: individualobsidian-db
+    environment:
+      POSTGRES_DB: individualobsidian_db
+      POSTGRES_USER: io_user
+      POSTGRES_PASSWORD: io_pass
+    ports:
+      - "5432:5432"
+    volumes:
+      - individualobsidian_data:/var/lib/postgresql/data
+    restart: unless-stopped
+
+volumes:
+  individualobsidian_data:
