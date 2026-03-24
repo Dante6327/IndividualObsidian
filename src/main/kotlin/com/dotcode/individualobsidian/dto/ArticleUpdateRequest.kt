@@ -1,13 +1,10 @@
 package com.dotcode.individualobsidian.dto
 
-import com.dotcode.individualobsidian.domain.Article
 import jakarta.validation.constraints.NotBlank
-import java.time.LocalDateTime
 
-data class ArticleCreateRequest(
+data class ArticleUpdateRequest(
     @field:NotBlank
     val title: String,
-    @field:NotBlank
     val content: String,
     val tags: List<String> = listOf(),
     val aliases: List<String> = listOf(),

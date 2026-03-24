@@ -5,13 +5,13 @@ import java.time.LocalDateTime
 
 data class ArticleResponse(
     val id: Long,
-    val title: String,
-    val content: String,
-    val tags: List<String>,
-    val aliases: List<String>,
-    val filePath: String,
+    var title: String,
+    var content: String,
+    var tags: List<String>,
+    var aliases: List<String>,
+    var filePath: String,
     val createdAt: LocalDateTime,
-    val updatedAt: LocalDateTime
+    var updatedAt: LocalDateTime
 ) {
     companion object {
         fun from(article: Article): ArticleResponse {

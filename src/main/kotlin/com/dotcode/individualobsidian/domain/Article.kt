@@ -36,5 +36,17 @@ class Article (
 
     var filePath: String
 ): BaseEntity() {
-
+    fun update(
+        title: String,
+        content: String,
+        tags: List<String>,
+        aliases: List<String>,
+        filePath: String,
+    ) {
+        this.title = title
+        this.content = content
+        this.tags = tags
+        this.aliases = aliases
+        this.filePath = filePath
+    }
 }
